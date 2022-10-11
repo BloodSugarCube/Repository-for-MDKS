@@ -14,21 +14,21 @@ function calculator(string $expressionStr): float
     }
 
     $expressionArray = str_split($expressionStr);
-    $lenghtExpArr = count($expressionArray);
+    $lengthExpArr = count($expressionArray);
 
     foreach ($expressionArray as $element) {
         if (!(!in_array($element, $enumerationOperators) && !in_array($element, $enumerationNumbers))) {
             if (($counterTransitArr == 1 && ($element == '/' || $element == '*'))) {
                 echo("Первый символ выражения - знак деления или умножения - вырезается из выражения.\n");
                 $checkError = true;
-                $lenghtExpArr -= 1;
+                $lengthExpArr -= 1;
             }
             if ((in_array($element, $enumerationOperators) == in_array($previousElementArr, $enumerationOperators))) {
                 echo("Символ №$counterTransitArr является знаком выражения после знака выражения - вырезается.\n");
                 $checkError = true;
-                $lenghtExpArr -= 1;
+                $lengthExpArr -= 1;
             }
-            if ($counterTransitArr >= $lenghtExpArr && in_array($element, $enumerationOperators)) {
+            if ($counterTransitArr >= $lengthExpArr && in_array($element, $enumerationOperators)) {
                 echo("Один из последних символов выражения - знак операции - вырезается из выражения.\n");
                 $checkError = true;
             }
