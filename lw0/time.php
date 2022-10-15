@@ -6,7 +6,7 @@ function sumTime(string $firstTime, string $secondTime): string
     if (preg_match($regExp, $firstTime) && preg_match($regExp, $secondTime)) {
         return (date('H:i:s', strtotime($firstTime) + strtotime($secondTime) - strtotime('00:00:00')));
     } else {
-        exit('Incorrect input');
+        return 'Incorrect input';
     }
 }
 
