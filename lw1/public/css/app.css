@@ -1,0 +1,16 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #dedfde;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.header{
+    font-size: xx-large;
+}
+.header__logo{
+    width: 20%;
+}
+.element-icon{
+    width: 5%;
+}
